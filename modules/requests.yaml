@@ -1,0 +1,14 @@
+module:
+  name: requests
+  category: http-client
+  description: HTTP requests for humans
+  doc: https://docs.python-requests.org/en/master/
+  src: https://github.com/psf/requests
+  install: pip install -U requests
+  example: |
+    import requests
+    r = requests.get("http://www.google.com")
+    print(r.text)
+  screenshot: none
+  alternatives:
+    - tornado

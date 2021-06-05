@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% set m = module.module %}
+{% block header %}
+<h1 class="p-2 text-2xl text-semibold text-white font-mono">{% block title %}{{ m.name }}{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+{# module #}
+<div id="module" class="bg-gray p-4 border-t border-gray-200">
+    <dl>
+        <div class="bg-purple-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt>🏷  name </dt>
+            <dd class="col-span-2"> <span class=" text-white font-mono">{{ m.name }}</span> </dd>
+        </div>
+        <div class="bg-purple-600 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt>📁 category</dt>
+            <dd class="col-span-2"> <div class="ml-4 text-xs inline-flex items-center font-bold font-mono leading-sm uppercase px-3 py-1 bg-orange-900 text-white rounded-full">{{ m.category }}</div> </dd>
+        </div>
+        <div class="bg-purple-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt>  ❓ description</dt>
+            <dd class="col-span-2"> <span class=" text-white">{{ m.description }}</span> </dd>
+        </div>
+        <div class="bg-purple-600 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt> 📓 doc</dt>
+            <dd class="col-span-2"> <a href="{{m.src}}" class=" text-blue-300">{{ m.doc }}</a> </dd>
+        </div>
+        <div class="bg-purple-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt>  🛠  src</dt>
+            <dd class="col-span-2"> <a href="{{m.src}}"class=" text-blue-300">{{ m.src }}</a> </dd>
+        </div>
+        <div class="bg-purple-600 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt> 🪄  install</dt>
+            <dd class="col-span-2"> <div class=" bg-gray-900 text-white p-2"><code class=" text-white">{{ m.install }}</code></div> </dd>
+        </div>
+        <div class="bg-purple-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt> 🔮 example</dt>
+            <dd class="col-span-2"><div class=" bg-gray-900 text-white p-2 overflow-y-auto"> <pre class=" text-white font-mono">{{ m.example }}</pre> </div></dd>
+        </div>
+        <div class="bg-purple-600 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt> 🖼  screenshot</dt>
+            <dd class="col-span-2"> <img src="{{m.screenshot}}" alt="none" class= ""></img></dd>
+        </div>
+        <div class="bg-purple-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt> ⚖️  Alternatives</dt>
+            <dd class="col-span-2"><div class=" text-white">{% for alt in m.alternatives %}<a href="/module/{{ alt }}">{{ alt }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</div></dd>
+        </div>
+    </dl>
+</div>
+{% endblock %}

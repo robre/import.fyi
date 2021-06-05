@@ -1,0 +1,20 @@
+module:
+  name: flask
+  category: http-server
+  description: Flask is a nice python web server framework.
+  doc: https://flask.palletsprojects.com/en/2.0.x/
+  src: https://github.com/pallets/flask/
+  install: pip install -U Flask
+  example: |
+    from flask import Flask
+
+    app = Flask(__name__)
+
+    @app.route("/")
+    def hello():
+        return "Hello, World!"
+
+  screenshot: https://flask.palletsprojects.com/en/2.0.x/_images/flask-logo.png
+  alternatives:
+    - django
+    - http

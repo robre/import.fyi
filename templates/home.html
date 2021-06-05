@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Search{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<div class="grid justify-items-center bg-purple-900 p-16 border-t" >
+    <div>
+        <h1 class="text-2xl text-semibold text-white font-mono content-center ">import.fyi</h1>
+        <p class="text-white font-light pt-4 pb-4">find awesome python modules</p>
+        <input id="srch" type="search" name="search"></input>
+        <button type="submit" onclick="asdf()">🔍</button>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='search.js') }}"></script>
+{% endblock %}

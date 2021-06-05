@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>{% block title %}{% endblock %} - import.fyi </title>
+    </head>
+    <body class="bg-gray-800">
+        <div>
+            <nav class="flex items-center justify-between p-6 container mx-auto text-white">
+                <div>
+                    <a href="/" class="block mt-4 lg:inline-block text-teal-600 lg:mt-0 mr-10">import.fyi</a>
+                    <a href="/" class="block mt-4 lg:inline-block text-teal-600 lg:mt-0 mr-10">Search</a>
+                    <a href="/browse/" class="block mt-4 lg:inline-block text-teal-600 lg:mt-0 mr-10">Browse</a>
+                    <a href="/submit/" class="block mt-4 lg:inline-block text-teal-600 lg:mt-0 mr-10">Submit</a>
+                </div>
+            </nav>
+        </div>
+        <hr/>
+        <section class="content">
+            <div class="bg-gray-700 p-20">
+                <header class="">
+                    {% block header %}{% endblock %}
+                </header>
+                {% for message in get_flashed_messages() %}
+                <div class="flash">{{ message }}</div>
+                {% endfor %}
+                <div>
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </section>
+                    {% block scripts %}{% endblock %}
+    </body>
+</html>

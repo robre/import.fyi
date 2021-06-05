@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block header %}
+<h1 class="p-2 text-2xl text-semibold text-white font-mono">{% block title %}Browse{% endblock %}</h1>
+{% endblock %}
+
+{% set colors = ["green", "red", "yellow", "blue", "indigo", "purple", "pink"] %}
+{% block content %}
+<div id="module" class="bg-gray p-4 border-t border-gray-200">
+    <div class="grid grid-cols-3 gap-4">
+        {% for cat in categories %}
+            {% if loop.index is divisibleby 3 %}
+            {% elif loop.index + 1 is divisibleby 3 %}
+            {% elif loop.index + 2 is divisibleby 3 %}
+            {% endif %}
+            {% set f = colors | random%}
+            <div class="bg-{{ f }}-400">
+                <div class="p-2">
+                    <span class="font-mono font-bold">{{ cat }}</span> modules
+                </div>
+                <div class="p-2 bg-{{ f }}-200">
+                    <ul>
+                        {% for m in modules %}
+                            {% if modules[m].module.category == cat %}
+                                <li><a href="/module/{{m}}" class="font-mono">{{ m }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

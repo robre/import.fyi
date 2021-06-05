@@ -1,0 +1,14 @@
+module:
+  name: logzero
+  category: logging
+  description: An easy to use logging framework
+  doc: https://logzero.readthedocs.io/en/latest/
+  src: https://github.com/metachris/logzero
+  install: pip install -U logzero
+  example: |
+    from logzero import logger as log
+    log.error("some error")
+    log.info("info")
+  screenshot: none
+  alternatives:
+    - logging

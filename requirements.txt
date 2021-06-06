@@ -1,0 +1,5 @@
+Flask==1.1.2
+Flask-RESTful==0.3.8
+PyYAML==5.4.1
+fuzzywuzzy==0.18.0
+logzero==1.7.0

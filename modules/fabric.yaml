@@ -13,4 +13,4 @@ module:
     <Result cmd='hostname' exited=0>
   screenshot: https://www.fabfile.org/_static/logo.png
   alternatives:
-    - ASDF
+    - None

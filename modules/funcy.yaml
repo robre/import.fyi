@@ -8,6 +8,6 @@ module:
   example: |
     from funcy import select
     select(even, {1,2,3,10,20})                  # {2,10,20}
-  screenshot: 
+  screenshot: None
   alternatives:
     - toolz

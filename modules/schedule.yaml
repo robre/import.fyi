@@ -22,5 +22,6 @@ module:
     while True:
         schedule.run_pending()
         time.sleep(1)
-  screenshot: 
+  screenshot: None
   alternatives:
+    - None

@@ -1,6 +1,6 @@
 module:
   name: arrow
-  category: time
+  category: datetime
   description: easy to use time and date formatting
   doc: https://arrow.readthedocs.io/en/latest/
   src: https://github.com/arrow-py/arrow
@@ -9,6 +9,6 @@ module:
     >>> import arrow
     >>> arrow.get('2013-05-11T21:23:58.970460+07:00')
     <Arrow [2013-05-11T21:23:58.970460+07:00]>
-  screenshot:
+  screenshot: none
   alternatives:
     - maya

@@ -17,6 +17,6 @@ module:
     >>> sentence = "This cat jumped over this other cat!"
     >>> wordcount(sentence)
     {'this': 2, 'cat': 2, 'jumped': 1, 'over': 1, 'other': 1}
-  screenshot: 
+  screenshot: None
   alternatives:
     - funcy

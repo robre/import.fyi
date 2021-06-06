@@ -13,6 +13,6 @@ module:
     # EXPLOIT CODE GOES HERE
     r.send(asm(shellcraft.sh()))
     r.interactive()
-  screenshot:
+  screenshot: None
   alternatives:
     - scapy

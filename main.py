@@ -2,10 +2,11 @@
 # (c) @r0bre (mail[ät]r0b.re)
 # Created: 05/06/2021 
 
-from flask import Flask, jsonify, render_template, url_for
+from flask import Flask, jsonify, render_template, url_for, redirect
 import yaml
 import glob
 from fuzzywuzzy import process
+import random
 
 import logzero
 from logzero import logger as log
@@ -54,6 +55,12 @@ def search(searchterm):
 @app.route("/browse/")
 def browse():
     return render_template("browse.html", categories=categories, modules=modules)
+
+
+@app.route("/random/")
+def randomp():
+    randompage = random.choice(list(modules))
+    return  redirect(f"/module/{randompage}")
 
 
 

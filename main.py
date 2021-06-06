@@ -24,6 +24,7 @@ for f in module_yamls:
             log.error(f"Yaml Exeption when reading {f}: {e}")
 
 categories = ["http-server", "http-client", "serialization", "filesystem", "logging", "search", "hacking"]
+categories = list(set([modules[m]["module"]["category"] for m in modules]))
 
 print(modules)
 

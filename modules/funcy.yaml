@@ -1,0 +1,13 @@
+module:
+  name: funcy
+  category: functions
+  description: A collection of fancy functional tools focused on practicality.
+  doc: http://funcy.readthedocs.org/
+  src: https://github.com/Suor/funcy
+  install: pip install -U funcy
+  example: |
+    from funcy import select
+    select(even, {1,2,3,10,20})                  # {2,10,20}
+  screenshot: 
+  alternatives:
+    - toolz

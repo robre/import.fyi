@@ -1,0 +1,22 @@
+module:
+  name: psutil
+  category: system
+  description: psutil (process and system utilities) is a cross-platform library for retrieving information on running processes and system utilization (CPU, memory, disks, network, sensors) in Python
+  doc: https://psutil.readthedocs.io
+  src: https://github.com/giampaolo/psutil
+  install: pip install -U psutil
+  example: |
+    >>> import psutil
+    >>>
+    >>> psutil.cpu_times()
+    scputimes(user=3961.46, nice=169.729, system=2150.659, idle=16900.540, iowait=629.59, irq=0.0, softirq=19.42, steal=0.0, guest=0, nice=0.0)
+    >>>
+    >>> for x in range(3):
+    ...     psutil.cpu_percent(interval=1)
+    ...
+    4.0
+    5.9
+    3.8
+  screenshot: 
+  alternatives:
+    - os

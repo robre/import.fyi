@@ -1,0 +1,14 @@
+module:
+  name: tqdm
+  category: console
+  description: Instantly make your loops show a smart progress meter
+  doc: https://github.com/tqdm/tqdm#documentation
+  src: https://github.com/tqdm/tqdm
+  install: pip install -U tqdm
+  example: |
+    from tqdm import tqdm
+    for i in tqdm(range(10000)):
+      ...
+  screenshot: https://camo.githubusercontent.com/33560063a95ebbeeba58bf2c427be0f66234688be47db0a005f11d244b142a52/68747470733a2f2f696d672e7471646d2e6d6c2f7471646d2e676966
+  alternatives:
+    - pwntools

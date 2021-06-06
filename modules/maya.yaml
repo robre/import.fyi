@@ -1,0 +1,20 @@
+module:
+  name: maya
+  category: datetime
+  description: Datetimes are very frustrating to work with in Python, especially when dealing with different locales on different systems. This library exists to make the simple things much easier, while admitting that time is an illusion (timezones doubly so).
+  doc: https://github.com/timofurrer/maya
+  src: https://github.com/timofurrer/maya
+  install: pip install -U maya
+  example: |
+    >>> now = maya.now()
+    <MayaDT epoch=1481850660.9>
+
+    >>> tomorrow = maya.when('tomorrow')
+    <MayaDT epoch=1481919067.23>
+
+    >>> tomorrow.slang_date()
+    'tomorrow'
+
+  screenshot: 
+  alternatives:
+    - arrow

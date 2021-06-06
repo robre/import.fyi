@@ -1,0 +1,12 @@
+module:
+  name: NAME
+  category: CAT
+  description: DESC
+  doc: DOC
+  src: SRC
+  install: pip install -U ASD
+  example: |
+    from flask import Flask
+  screenshot: ASDF
+  alternatives:
+    - ASDF

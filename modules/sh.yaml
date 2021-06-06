@@ -1,0 +1,13 @@
+module:
+  name: sh
+  category: console
+  description: sh is a full-fledged subprocess replacement for Python 2.6 - 3.8, PyPy and PyPy3 that allows you to call any program as if it were a function
+  doc: https://amoffat.github.io/sh
+  src: https://github.com/amoffat/sh
+  install: pip install -U sh
+  example: |
+    from sh import ifconfig
+    print(ifconfig("eth0"))
+  screenshot: https://raw.githubusercontent.com/amoffat/sh/master/logo-230.png
+  alternatives:
+    - subprocess

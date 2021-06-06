@@ -1,0 +1,20 @@
+module:
+  name: uvloop
+  category: async
+  description: uvloop is a fast, drop-in replacement of the built-in asyncio event loop. uvloop is implemented in Cython and uses libuv under the hood.
+  doc: http://uvloop.readthedocs.org/
+  src: https://github.com/MagicStack/uvloop
+  install: pip install -U uvloop
+  example: |
+    import asyncio
+    import uvloop
+
+    async def main():
+        # Main entry-point.
+        ...
+
+    uvloop.install()
+    asyncio.run(main())
+  screenshot: https://raw.githubusercontent.com/MagicStack/uvloop/master/performance.png
+  alternatives:
+    - asyncio

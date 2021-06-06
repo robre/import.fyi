@@ -1,0 +1,19 @@
+module:
+  name: typer
+  category: console
+  description: Typer is a library for building CLI applications that users will love using and developers will love creating.
+  doc: https://typer.tiangolo.com/
+  src: https://github.com/tiangolo/typer
+  install: pip install -U typer
+  example: |
+    from flask import Flask
+    import typer
+
+    def main(name: str):
+        typer.echo(f"Hello {name}")
+
+    if __name__ == "__main__":
+        typer.run(main)
+  screenshot: 
+  alternatives:
+    - click

@@ -1,0 +1,16 @@
+module:
+  name: bashplotlib
+  category: console
+  description: plotting in the terminal
+  doc: https://github.com/glamp/bashplotlib#usage
+  src: https://github.com/glamp/bashplotlib
+  install: pip install -U bashplotlib
+  example: |
+    from flask import Flask
+    import numpy as np
+    from bashplotlib.histogram import plot_hist
+    arr = np.random.normal(size=1000, loc=0, scale=1)
+    plot_hist(arr, bincount=50)
+  screenshot: https://github.com/glamp/bashplotlib/raw/master/examples/img/basichist.png
+  alternatives:
+    - matplotlib

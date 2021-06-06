@@ -1,0 +1,22 @@
+module:
+  name: toolz
+  category: functions
+  description: A set of utility functions for iterators, functions, and dictionaries.
+  doc: https://toolz.readthedocs.io/
+  src: https://github.com/pytoolz/toolz
+  install: pip install -U toolz
+  example: |
+    >>> def stem(word):
+    ...     """ Stem word to primitive form """
+    ...     return word.lower().rstrip(",.!:;'-\"").lstrip("'\"")
+
+    >>> from toolz import compose, frequencies, partial
+    >>> from toolz.curried import map
+    >>> wordcount = compose(frequencies, map(stem), str.split)
+
+    >>> sentence = "This cat jumped over this other cat!"
+    >>> wordcount(sentence)
+    {'this': 2, 'cat': 2, 'jumped': 1, 'over': 1, 'other': 1}
+  screenshot: 
+  alternatives:
+    - funcy

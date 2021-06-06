@@ -1,0 +1,18 @@
+module:
+  name: pwntools
+  category: hacking
+  description: ctf toolkit and framework, exploit development library
+  doc: https://docs.pwntools.com
+  src: https://github.com/Gallopsled/pwntools
+  install: pip install -U pwntools
+  example: |
+    from pwn import *
+    context(arch = 'i386', os = 'linux')
+
+    r = remote('exploitme.example.com', 31337)
+    # EXPLOIT CODE GOES HERE
+    r.send(asm(shellcraft.sh()))
+    r.interactive()
+  screenshot:
+  alternatives:
+    - scapy

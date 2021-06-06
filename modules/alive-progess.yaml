@@ -1,0 +1,17 @@
+module:
+  name: alive-progress
+  category: console
+  description: A new kind of Progress Bar, with real-time throughput, eta and very cool animations!
+  doc: https://github.com/rsalmei/alive-progress
+  src: https://github.com/rsalmei/alive-progress
+  install: pip install -U alive-progress
+  example: |
+    from alive_progress import alive_bar
+
+    with alive_bar(total) as bar:  # declare your expected total
+        for item in items:         # iterate as usual over your items
+            ...                    # process each item
+            bar()                  # call after consuming one item
+  screenshot: https://raw.githubusercontent.com/rsalmei/alive-progress/master/img/showtime-spinners.gif
+  alternatives:
+    - ASDF

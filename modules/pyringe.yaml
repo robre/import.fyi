@@ -1,0 +1,13 @@
+module:
+  name: pyringe
+  category: debugging
+  description: Pyringe is a python debugger capable of attaching to running processes, inspecting their state and even of injecting python code into them while they're running.
+  doc: https://github.com/google/pyringe
+  src: https://github.com/google/pyringe
+  install: pip install -U pyringe
+  example: |
+    import pyringe
+    pyringe.interact()
+  screenshot: 
+  alternatives:
+    - pdb

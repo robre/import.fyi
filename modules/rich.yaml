@@ -1,0 +1,13 @@
+module:
+  name: rich
+  category: text-formatting
+  description: Rich is a Python library for rich text and beautiful formatting in the terminal.
+  doc: https://rich.readthedocs.io/en/latest/index.html
+  src: https://github.com/willmcgugan/rich
+  install: pip install -U rich
+  example: |
+    from rich import print
+    print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
+  screenshot: https://raw.githubusercontent.com/willmcgugan/rich/master/imgs/print.png
+  alternatives:
+    - pprint

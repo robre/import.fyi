@@ -1,0 +1,11 @@
+module:
+  name: scalene
+  category: profiler
+  description: scalene is a high-performance cpu, gpu and memory profiler for python
+  doc: https://github.com/plasma-umass/scalene
+  src: https://github.com/plasma-umass/scalene
+  install: pip install -U scalene
+  example: |
+    scalene test/testme.py
+  screenshot: https://raw.githubusercontent.com/plasma-umass/scalene/master/docs/images/sample-profile-pystone.png
+  alternatives:
